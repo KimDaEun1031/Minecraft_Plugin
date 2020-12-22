@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.bukkit.command.ConsoleCommandSender"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="org.bukkit.plugin.java.JavaPlugin"/>
+    <fullyQualifiedTypeName name="org.bukkit.event.Listener"/>
+    <fullyQualifiedTypeName name="org.bukkit.event.player.PlayerJoinEvent"/>
+    <fullyQualifiedTypeName name="org.bukkit.ChatColor"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.Long"/>
+    <fullyQualifiedTypeName name="org.bukkit.event.EventHandler"/>
+    <fullyQualifiedTypeName name="org.bukkit.event.player.PlayerChatEvent"/>
+    <fullyQualifiedTypeName name="org.bukkit.entity.Player"/>
+    <fullyQualifiedTypeName name="rpgplugin.stat.Stat"/>
+    <fullyQualifiedTypeName name="org.bukkit.inventory.Inventory"/>
+    <fullyQualifiedTypeName name="org.bukkit.Bukkit"/>
+</qualifiedTypeNameHistroy>

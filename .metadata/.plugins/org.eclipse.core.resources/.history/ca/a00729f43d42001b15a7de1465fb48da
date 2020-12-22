@@ -1,0 +1,63 @@
+package rpgplugin.stat;
+
+import java.util.List;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.ArrayList;
+
+public class Stat {
+	public void CreateNewStat(String player) {
+		File filename = new File("plugins/RPG/Stat" + player + ".txt");
+		File folder_Location1 = new File("plugins/RPG");
+		File folder_Location2 = new File("plugins/RPG/Stat");
+		
+		try {
+			if(! filename.exists()) {
+				folder_Location1.mkdir();
+				folder_Location2.mkdir();
+				filename.createNewFile();
+			}
+			BufferedWriter w = new BufferedWriter(new FileWriter(filename));
+			w.append("레벨:1" + "\r\n" + "스탯포인트:0" + "\r\n" + "경험치:0" +"\r\n" + "최대경험치:1" + "\r\n" +
+					"돈:1000" + "\r\n" + "체력:10" + "\r\n" +"민첩:10" + "\r\n" + "지력:10" + "\r\n" + "방어:0" + "\r\n" +
+					"행운:10" + "\r\n" + "활당김:0" + "\r\n" + "최종공격시간:0");
+			w.flush();
+			w.close();
+		} catch (Exception e) {
+		}
+	}
+	
+	public long[] getStat(String player) {
+		File filename = new File("plugins/RPG/Stat" + player + ".txt");
+		File folder_Location1 = new File("plugins/RPG");
+		File folder_Location2 = new File("plugins/RPG/Stat");
+		try {
+			if(! filename.exists()) {
+				folder_Location1.mkdir();
+				folder_Location2.mkdir();
+				filename.createNewFile();
+			}
+			long[] stat = new long[12];
+			BufferedReader r = new BufferedReader(new FileReader(filename));
+			List list = new ArrayList();
+			String s;
+			while((s = r.readLine()) != null) {
+				list.add(Long.valueOf(Cutter(s)));
+			}
+			r.close();
+			for(int count=0;count<11;count++) {
+				stat[count] = ((Long)list.get(count)).longValue();
+			}
+			return stat;
+		}catch (Exception e) {
+
+		}return stat;
+	
+	public long Cutter(String line) {
+		String [] cut = line.split(":");
+		return Long.parseLong(cut[1]);
+	}
+}

@@ -1,0 +1,10 @@
+package rpgplugin.stat;
+
+import java.io.File;
+
+public class Stat {
+	public void CreateNewStat(String player) {
+		File filename = new File("plugins/RPG/Stat" + player + ".txt");
+		File folder_Location1 = new File("plugins/RPG");
+	}
+}
